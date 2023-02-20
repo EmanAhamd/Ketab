@@ -10,11 +10,31 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { LoginComponent } from './Components/Auth/login/login.component';
+import { RegisterComponent } from './Components/Auth/register/register.component';
+import { HomeComponent } from './Components/User/home/home.component';
+import { NewArrivalsComponent } from './Components/User/new-arrivals/new-arrivals.component';
+import { EnglishBooksComponent } from './Components/User/english-books/english-books.component';
+import { ArabicBooksComponent } from './Components/User/arabic-books/arabic-books.component';
+import { ChildrenBooksComponent } from './Components/User/children-books/children-books.component';
+import { NotFoundPageComponent } from './Components/User/not-found-page/not-found-page.component';
+import { NavbareComponent } from './Shared/navbare/navbare.component';
+import { FooterComponent } from './Shared/footer/footer.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
+    NewArrivalsComponent,
+    EnglishBooksComponent,
+    ArabicBooksComponent,
+    ChildrenBooksComponent,
+    NotFoundPageComponent,
+    NavbareComponent,
+    FooterComponent
   ],
   imports: [
     MatIconModule,

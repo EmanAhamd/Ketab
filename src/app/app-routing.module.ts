@@ -1,7 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './Components/Auth/login/login.component';
+import { RegisterComponent } from './Components/Auth/register/register.component';
+import { ArabicBooksComponent } from './Components/User/arabic-books/arabic-books.component';
+import { ChildrenBooksComponent } from './Components/User/children-books/children-books.component';
+import { EnglishBooksComponent } from './Components/User/english-books/english-books.component';
+import { HomeComponent } from './Components/User/home/home.component';
+import { NewArrivalsComponent } from './Components/User/new-arrivals/new-arrivals.component';
+import { NotFoundPageComponent } from './Components/User/not-found-page/not-found-page.component';
 
-const routes: Routes = [];
+
+const routes: Routes = [
+  {path: 'home', component: HomeComponent},
+  {path:'', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'new', component: NewArrivalsComponent},
+  {path: 'english', component: EnglishBooksComponent},
+  {path: 'arabic', component: ArabicBooksComponent},
+  {path: 'children', component: ChildrenBooksComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
+  {path: '**', component: NotFoundPageComponent},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
