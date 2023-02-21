@@ -12,4 +12,10 @@ export class BookService {
   getNewArrivalBooks():Observable<any>{
     return this.http.get("https://api.itbook.store/1.0/new");
   }
+
+  getBookDetails(isbn13:any):Observable<any>{
+    return this.http.get(`https://api.itbook.store/1.0/books/${isbn13}`);
+  }
+
+
 }
