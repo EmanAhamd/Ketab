@@ -22,6 +22,8 @@ import { NotFoundPageComponent } from './Components/User/not-found-page/not-foun
 import { NavbareComponent } from './Shared/navbare/navbare.component';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { HomeNewBooksComponent } from './Components/User/Home/home-new-books/home-new-books.component';
+import { SliderComponent } from './Components/User/Home/slider/slider.component';
+import { TopAuthorsComponent } from './Components/User/Home/top-authors/top-authors.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { HomeNewBooksComponent } from './Components/User/Home/home-new-books/hom
     NotFoundPageComponent,
     NavbareComponent,
     FooterComponent,
-    HomeNewBooksComponent
+    HomeNewBooksComponent,
+    SliderComponent,
+    TopAuthorsComponent
   ],
   imports: [
     MatIconModule,
