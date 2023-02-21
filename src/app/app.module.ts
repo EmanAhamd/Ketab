@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+
 import { LoginComponent } from './Components/Auth/login/login.component';
 import { RegisterComponent } from './Components/Auth/register/register.component';
 import { HomeComponent } from './Components/User/Home/home/home.component';
@@ -20,6 +21,7 @@ import { ChildrenBooksComponent } from './Components/User/Children-Books/childre
 import { NotFoundPageComponent } from './Components/User/not-found-page/not-found-page.component';
 import { NavbareComponent } from './Shared/navbare/navbare.component';
 import { FooterComponent } from './Shared/footer/footer.component';
+import { HomeNewBooksComponent } from './Components/User/Home/home-new-books/home-new-books.component';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { FooterComponent } from './Shared/footer/footer.component';
     ChildrenBooksComponent,
     NotFoundPageComponent,
     NavbareComponent,
-    FooterComponent
+    FooterComponent,
+    HomeNewBooksComponent
   ],
   imports: [
     MatIconModule,
@@ -44,7 +47,8 @@ import { FooterComponent } from './Shared/footer/footer.component';
     NgbModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
