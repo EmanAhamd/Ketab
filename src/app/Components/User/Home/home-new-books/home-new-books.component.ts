@@ -8,11 +8,17 @@ BookService
   styleUrls: ['./home-new-books.component.css']
 })
 export class HomeNewBooksComponent {
-  constructor(private bookService:BookService){
+  newArrivals:any[] = [];
 
+  constructor(private bookService:BookService){
     bookService.getNewArrivalBooks().subscribe((res) => {
-      console.log(res.books);
+      let response = res.books;
+      this.newArrivals = response.slice(10,14);
       
-    })
+      console.log(response);
+      console.log(this.newArrivals);
+      
+    });
+
   }
 }
