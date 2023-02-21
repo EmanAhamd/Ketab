@@ -1,0 +1,30 @@
+<!-- <section class="bestSellerSlider">
+    <div class="container">
+        <div class="slider-wrap">
+            <div  class="slider-main">
+                <div *ngFor="let book of bestSellerBooks" class="item">
+                    <div class="text">{{book}}</div>
+                </div>
+            </div>
+            
+                <button type="button" class="next">
+                    <i class="fa-solid fa-angles-right"></i>
+                </button>
+                <button type="button" class="prev">
+                    <i class="fa-solid fa-angles-left"></i>
+                </button>
+        </div>
+    </div>
+</section> -->
+
+<h2>Best Seller</h2>
+<owl-carousel-o [options]="customOptions">
+    <ng-container  *ngFor="let slide of bestSellerBooks">
+        <ng-template  carouselSlide [id]="slide.isbn13">
+            <div >
+                <img [routerLink]="['/book',slide.isbn13]" [src]="slide.image" [alt]="slide.alt" [title]="slide.title">
+            </div>
+            
+        </ng-template>
+    </ng-container>
+</owl-carousel-o>

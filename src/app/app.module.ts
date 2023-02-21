@@ -8,8 +8,10 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+
 
 import { LoginComponent } from './Components/Auth/login/login.component';
 import { RegisterComponent } from './Components/Auth/register/register.component';
@@ -22,6 +24,9 @@ import { NotFoundPageComponent } from './Components/User/not-found-page/not-foun
 import { NavbareComponent } from './Shared/navbare/navbare.component';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { HomeNewBooksComponent } from './Components/User/Home/home-new-books/home-new-books.component';
+import { BookDetailsComponent } from './Components/User/book-details/book-details.component';
+import { BestSellerComponent } from './Components/User/Home/best-seller/best-seller.component';
+
 
 
 @NgModule({
@@ -37,7 +42,9 @@ import { HomeNewBooksComponent } from './Components/User/Home/home-new-books/hom
     NotFoundPageComponent,
     NavbareComponent,
     FooterComponent,
-    HomeNewBooksComponent
+    HomeNewBooksComponent,
+    BookDetailsComponent,
+    BestSellerComponent
   ],
   imports: [
     MatIconModule,
@@ -48,7 +55,9 @@ import { HomeNewBooksComponent } from './Components/User/Home/home-new-books/hom
     FontAwesomeModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
