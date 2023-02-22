@@ -30,6 +30,10 @@ import { BestSellerComponent } from './Components/User/Home/best-seller/best-sel
 
 import { SliderComponent } from './Components/User/Home/slider/slider.component';
 import { TopAuthorsComponent } from './Components/User/Home/top-authors/top-authors.component';
+import { CartComponent } from './Components/User/Cart/cart/cart.component';
+import { ArabicBookItemComponent } from './Components/User/Arabic-Books/arabic-book-item/arabic-book-item.component';
+import { EnglishBookItemComponent } from './Components/User/English-Books/english-book-item/english-book-item.component';
+import { SearchPipe } from './Core/pipes/search.pipe';
 
 
 
@@ -50,7 +54,11 @@ import { TopAuthorsComponent } from './Components/User/Home/top-authors/top-auth
     BookDetailsComponent,
     SliderComponent,
     TopAuthorsComponent,
-    BestSellerComponent
+    BestSellerComponent,
+    CartComponent,
+    ArabicBookItemComponent,
+    EnglishBookItemComponent,
+    SearchPipe
 
   ],
   imports: [
