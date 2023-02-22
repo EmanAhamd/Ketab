@@ -30,6 +30,7 @@ import { BestSellerComponent } from './Components/User/Home/best-seller/best-sel
 
 import { SliderComponent } from './Components/User/Home/slider/slider.component';
 import { TopAuthorsComponent } from './Components/User/Home/top-authors/top-authors.component';
+import { CartComponent } from './Components/User/Cart/cart/cart.component';
 
 
 
@@ -50,7 +51,8 @@ import { TopAuthorsComponent } from './Components/User/Home/top-authors/top-auth
     BookDetailsComponent,
     SliderComponent,
     TopAuthorsComponent,
-    BestSellerComponent
+    BestSellerComponent,
+    CartComponent
 
   ],
   imports: [
