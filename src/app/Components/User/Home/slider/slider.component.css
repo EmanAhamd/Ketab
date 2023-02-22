@@ -1,0 +1,19 @@
+.carousel {
+    height: 70vh;
+}
+
+
+.carousel-item img {
+    width: fit-content;
+    height: 70vh;
+}
+
+@media (max-width:767px) {
+    .carousel {
+        height: 60vh;
+    }
+
+    .carousel-item img {
+        height: 60vh;
+    }
+}

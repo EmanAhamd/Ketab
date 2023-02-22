@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,8 +9,11 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
 import { LoginComponent } from './Components/Auth/login/login.component';
 import { RegisterComponent } from './Components/Auth/register/register.component';
 import { HomeComponent } from './Components/User/Home/home/home.component';
@@ -21,6 +24,13 @@ import { ChildrenBooksComponent } from './Components/User/Children-Books/childre
 import { NotFoundPageComponent } from './Components/User/not-found-page/not-found-page.component';
 import { NavbareComponent } from './Shared/navbare/navbare.component';
 import { FooterComponent } from './Shared/footer/footer.component';
+import { HomeNewBooksComponent } from './Components/User/Home/home-new-books/home-new-books.component';
+import { BookDetailsComponent } from './Components/User/book-details/book-details.component';
+import { BestSellerComponent } from './Components/User/Home/best-seller/best-seller.component';
+
+import { SliderComponent } from './Components/User/Home/slider/slider.component';
+import { TopAuthorsComponent } from './Components/User/Home/top-authors/top-authors.component';
+
 
 
 @NgModule({
@@ -35,7 +45,13 @@ import { FooterComponent } from './Shared/footer/footer.component';
     ChildrenBooksComponent,
     NotFoundPageComponent,
     NavbareComponent,
-    FooterComponent
+    FooterComponent,
+    HomeNewBooksComponent,
+    BookDetailsComponent,
+    SliderComponent,
+    TopAuthorsComponent,
+    BestSellerComponent
+
   ],
   imports: [
     MatIconModule,
@@ -45,7 +61,10 @@ import { FooterComponent } from './Shared/footer/footer.component';
     NgbModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

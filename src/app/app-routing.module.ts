@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './Components/Auth/login/login.component';
 import { RegisterComponent } from './Components/Auth/register/register.component';
 import { ArabicBooksComponent } from './Components/User/Arabic-Books/arabic-books/arabic-books.component';
+import { BookDetailsComponent } from './Components/User/book-details/book-details.component';
 import { ChildrenBooksComponent } from './Components/User/Children-Books/children-books/children-books.component';
 import { EnglishBooksComponent } from './Components/User/English-Books/english-books/english-books.component';
 import { HomeComponent } from './Components/User/Home/home/home.component';
@@ -18,6 +19,9 @@ const routes: Routes = [
   {path: 'english', component: EnglishBooksComponent},
   {path: 'arabic', component: ArabicBooksComponent},
   {path: 'children', component: ChildrenBooksComponent},
+  {path: 'book/:id', component: BookDetailsComponent},
+
+
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: '**', component: NotFoundPageComponent},
