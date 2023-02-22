@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
+
 
 @Component({
   selector: 'app-english-book-item',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./english-book-item.component.css']
 })
 export class EnglishBookItemComponent {
-
+  @Input() englishBooks:any[] = [];
 }
