@@ -1,0 +1,33 @@
+a{
+    background-color: white;
+}
+
+.img {
+    width: 100px;
+    height: 30px;
+    margin-right: auto;
+
+
+    
+}
+.alln{
+    padding-left: 50px;
+    margin: 40px;
+}
+
+a:hover {
+    border-bottom: 1px solid #002152 ;
+    color: #07BFA5 ;
+    animation: reverse;
+
+  }
+
+  /* @media screen and (min-width: 200px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  } */
+  
+
+ 
