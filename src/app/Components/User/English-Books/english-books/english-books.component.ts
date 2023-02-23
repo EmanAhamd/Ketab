@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { BookService } from 'src/app/Core/Services/book.service';
+
 
 @Component({
   selector: 'app-english-books',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class EnglishBooksComponent {
 
+  
+constructor(private bookService:BookService){
+  
+}
+EnglishBooks:any[] = this.bookService.EnglishBooks;
+  
 }
