@@ -7,7 +7,7 @@ import { Observable, throwError } from 'rxjs';
 })
 export class BookService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http:HttpClient) { }
 
   ArabicBooks: any[] = [
     { id: 1, title: 'دجال', category: 'ادب عربى', price: '15$', img: 'https://m.media-amazon.com/images/M/MV5BZGU1ODJmM2UtNDk0OS00MWIyLWJlNjItMDU3MTU2ZmYxNTM4XkEyXkFqcGdeQXVyMTQyMTMwOTk0._V1_.jpg' },
@@ -32,5 +32,6 @@ export class BookService {
     return this.http.get(`https://api.itbook.store/1.0/books/${isbn13}`);
   }
 
+  
 
 }

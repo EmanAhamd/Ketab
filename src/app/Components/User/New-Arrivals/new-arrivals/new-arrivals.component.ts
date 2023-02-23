@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { BookService } from 'src/app/Core/Services/book.service';
+BookService
 
 @Component({
   selector: 'app-new-arrivals',
@@ -7,4 +9,23 @@ import { Component } from '@angular/core';
 })
 export class NewArrivalsComponent {
 
-}
+  newArrivals:any[] = [];
+
+  constructor(private bookService:BookService){
+    bookService.getNewArrivalBooks().subscribe((res) => {
+      let response = res.books;
+      this.newArrivals = response.slice(10,18);
+      
+      console.log(response);
+      console.log(this.newArrivals);
+      
+    });
+
+  }
+
+  
+  }
+
+
+
+
