@@ -4,8 +4,8 @@ footer {
   
 }
 img{
-    width: 200px;
-    height: 150px;
+    width: 150px;
+    height: 80px;
     
     display: block;
     margin-left: auto;
@@ -15,8 +15,6 @@ img{
 
 }
 
-img {
-    width: 150px;
-}
+
 
 
