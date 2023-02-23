@@ -31,7 +31,7 @@ a:hover {
 
   @media screen and (max-width: 991px) {
     .marg-top{
-      margin-top: 14.2px !important;
+      margin-top: 1% !important;
     }  
     .navbar-nav{
       padding-left: 10%;

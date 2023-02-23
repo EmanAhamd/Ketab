@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -34,6 +35,7 @@ import { CartComponent } from './Components/User/Cart/cart/cart.component';
 import { ArabicBookItemComponent } from './Components/User/Arabic-Books/arabic-book-item/arabic-book-item.component';
 import { EnglishBookItemComponent } from './Components/User/English-Books/english-book-item/english-book-item.component';
 import { SearchPipe } from './Core/pipes/search.pipe';
+
 
 
 
@@ -72,7 +74,8 @@ import { SearchPipe } from './Core/pipes/search.pipe';
     FlexLayoutModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
