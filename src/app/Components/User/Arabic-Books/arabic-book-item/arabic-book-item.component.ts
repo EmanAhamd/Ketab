@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-arabic-book-item',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./arabic-book-item.component.css']
 })
 export class ArabicBookItemComponent {
-
+  @Input() Books: any[] = [];
+  @Input() terms: string = '';
 }
