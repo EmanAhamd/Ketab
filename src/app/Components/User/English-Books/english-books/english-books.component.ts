@@ -9,10 +9,10 @@ import { BookService } from 'src/app/Core/Services/book.service';
 })
 export class EnglishBooksComponent {
 
-  
-constructor(private bookService:BookService){
-  
-}
-EnglishBooks:any[] = this.bookService.EnglishBooks;
-  
+
+  constructor(private bookService: BookService) {
+
+  }
+
+
 }
