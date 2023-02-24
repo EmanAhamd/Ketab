@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class=" col-lg-3 col-md-6 col-sm-12 mb-5" *ngFor="let book of Books|search:terms">
+            <div class="book-holder">
+                <div [routerLink]="['/book',book.id]" class="book-img">
+                    <img src="{{book.img}}" alt="book">
+                    <div class="book-desc">
+                        <p class="book-title">{{book.title}}</p>
+                        <p class="auther-name">Auther Name</p>
+                        <p class="book-price">{{book.price}}</p>
+                    </div>
+                </div>
+                <div class="add-btn-container">
+                    <button class="add-btn">
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>

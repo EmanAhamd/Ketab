@@ -21,7 +21,6 @@ import { HomeComponent } from './Components/User/Home/home/home.component';
 import { NewArrivalsComponent } from './Components/User/New-Arrivals/new-arrivals/new-arrivals.component';
 import { EnglishBooksComponent } from './Components/User/English-Books/english-books/english-books.component';
 import { ArabicBooksComponent } from './Components/User/Arabic-Books/arabic-books/arabic-books.component';
-import { ChildrenBooksComponent } from './Components/User/Children-Books/children-books/children-books.component';
 import { NotFoundPageComponent } from './Components/User/not-found-page/not-found-page.component';
 import { NavbareComponent } from './Shared/navbare/navbare.component';
 import { FooterComponent } from './Shared/footer/footer.component';
@@ -35,6 +34,10 @@ import { CartComponent } from './Components/User/Cart/cart/cart.component';
 import { ArabicBookItemComponent } from './Components/User/Arabic-Books/arabic-book-item/arabic-book-item.component';
 import { EnglishBookItemComponent } from './Components/User/English-Books/english-book-item/english-book-item.component';
 import { SearchPipe } from './Core/pipes/search.pipe';
+import { ChildrenArabicBookItemComponent } from './Components/User/Children-Books/Children-Arabic/children-arabic-book-item/children-arabic-book-item.component';
+import { ChildrenArabicBooksComponent } from './Components/User/Children-Books/Children-Arabic/children-arabic-books/children-arabic-books.component';
+import { ChildrenEnglishBookItemComponent } from './Components/User/Children-Books/Children-English/children-english-book-item/children-english-book-item.component';
+import { ChildrenEnglishBooksComponent } from './Components/User/Children-Books/Children-English/children-english-books/children-english-books.component';
 
 
 
@@ -48,7 +51,6 @@ import { SearchPipe } from './Core/pipes/search.pipe';
     NewArrivalsComponent,
     EnglishBooksComponent,
     ArabicBooksComponent,
-    ChildrenBooksComponent,
     NotFoundPageComponent,
     NavbareComponent,
     FooterComponent,
@@ -60,7 +62,11 @@ import { SearchPipe } from './Core/pipes/search.pipe';
     CartComponent,
     ArabicBookItemComponent,
     EnglishBookItemComponent,
-    SearchPipe
+    SearchPipe,
+    ChildrenArabicBookItemComponent,
+    ChildrenArabicBooksComponent,
+    ChildrenEnglishBookItemComponent,
+    ChildrenEnglishBooksComponent
 
   ],
   imports: [
