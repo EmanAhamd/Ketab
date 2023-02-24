@@ -1,15 +1,16 @@
-<div class="container ">
-    <h1>English Books</h1>
-    <div class="row my-5 ">
+<div class="container">
+    <h1>كتب عربية</h1>
+    <div class="row mb-5">
         <input [(ngModel)]="term" type="text" placeholder=" &#xF002; search for book by title"
-            style="font-family:Arial, FontAwesome" class="form-control w-50 m-auto">
+            style="font-family:Arial, FontAwesome" class="form-control w-50 m-auto mt-5">
     </div>
+
     <div class="row w-75 d-flex justify-content-around m-auto my-5">
         <button class="col-lg-2 col-md-4 col-sm-6 btn btn-dark shadow" *ngFor="let chip of chips"
             (click)="filterByCategory(chip)">{{chip}}</button>
     </div>
+
     <div>
-        <app-english-book-item [englishBooks]="FilteriedBooks" [term]="term">
-        </app-english-book-item>
+        <app-children-arabic-book-item [Books]="FilteriedBooks" [terms]="term"></app-children-arabic-book-item>
     </div>
 </div>

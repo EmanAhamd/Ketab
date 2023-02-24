@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { BookService } from 'src/app/Core/Services/book.service';
 
-
 @Component({
-  selector: 'app-english-books',
-  templateUrl: './english-books.component.html',
-  styleUrls: ['./english-books.component.css']
+  selector: 'app-children-english-books',
+  templateUrl: './children-english-books.component.html',
+  styleUrls: ['./children-english-books.component.css']
 })
-export class EnglishBooksComponent {
+export class ChildrenEnglishBooksComponent {
   term: string = '';
   FilteriedBooks: any[] = [];
   chips: any[] = ["All"];
