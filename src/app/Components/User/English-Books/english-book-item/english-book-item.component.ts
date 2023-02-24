@@ -8,4 +8,5 @@ import { Component, Input} from '@angular/core';
 })
 export class EnglishBookItemComponent {
   @Input() englishBooks:any[] = [];
+  @Input() term:string= '';
 }
