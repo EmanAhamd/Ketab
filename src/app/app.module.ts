@@ -38,6 +38,7 @@ import { ChildrenArabicBookItemComponent } from './Components/User/Children-Book
 import { ChildrenArabicBooksComponent } from './Components/User/Children-Books/Children-Arabic/children-arabic-books/children-arabic-books.component';
 import { ChildrenEnglishBookItemComponent } from './Components/User/Children-Books/Children-English/children-english-book-item/children-english-book-item.component';
 import { ChildrenEnglishBooksComponent } from './Components/User/Children-Books/Children-English/children-english-books/children-english-books.component';
+import { AdminSidebarComponent } from './Shared/admin-sidebar/admin-sidebar.component';
 
 
 
@@ -66,7 +67,8 @@ import { ChildrenEnglishBooksComponent } from './Components/User/Children-Books/
     ChildrenArabicBookItemComponent,
     ChildrenArabicBooksComponent,
     ChildrenEnglishBookItemComponent,
-    ChildrenEnglishBooksComponent
+    ChildrenEnglishBooksComponent,
+    AdminSidebarComponent
 
   ],
   imports: [
