@@ -39,6 +39,12 @@ import { ChildrenArabicBookItemComponent } from './Components/User/Children-Book
 import { ChildrenArabicBooksComponent } from './Components/User/Children-Books/Children-Arabic/children-arabic-books/children-arabic-books.component';
 import { ChildrenEnglishBookItemComponent } from './Components/User/Children-Books/Children-English/children-english-book-item/children-english-book-item.component';
 import { ChildrenEnglishBooksComponent } from './Components/User/Children-Books/Children-English/children-english-books/children-english-books.component';
+import { CrudBooksComponent } from './Components/Admin/crud-books/crud-books.component';
+import { AdminLayoutComponent } from './Components/Admin/admin-layout/admin-layout.component';
+import { AdminHomeComponent } from './Components/Admin/Dashboard/admin-home/admin-home.component';
+import { SideNavComponent } from './Components/Admin/Dashboard/side-nav/side-nav.component';
+import { CrudAuthorsComponent } from './Components/Admin/crud-authors/crud-authors.component';
+
 
 
 
@@ -67,7 +73,13 @@ import { ChildrenEnglishBooksComponent } from './Components/User/Children-Books/
     ChildrenArabicBookItemComponent,
     ChildrenArabicBooksComponent,
     ChildrenEnglishBookItemComponent,
-    ChildrenEnglishBooksComponent
+    ChildrenEnglishBooksComponent,
+    CrudBooksComponent,
+    AdminLayoutComponent,
+    AdminHomeComponent,
+    SideNavComponent,
+    CrudAuthorsComponent,
+
 
   ],
   imports: [
