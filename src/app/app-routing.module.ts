@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminBookComponent } from './Admin/admin-book/admin-book.component';
+import { AdminHomeComponent } from './Admin/admin-home/admin-home.component';
 import { LoginComponent } from './Components/Auth/login/login.component';
 import { RegisterComponent } from './Components/Auth/register/register.component';
 import { ArabicBooksComponent } from './Components/User/Arabic-Books/arabic-books/arabic-books.component';
@@ -12,6 +14,10 @@ import { HomeComponent } from './Components/User/Home/home/home.component';
 import { NewArrivalsComponent } from './Components/User/New-Arrivals/new-arrivals/new-arrivals.component';
 
 import { NotFoundPageComponent } from './Components/User/not-found-page/not-found-page.component';
+
+import { AdminSidebarComponent } from './Admin/admin-sidebar/admin-sidebar.component';
+
+
 
 
 const routes: Routes = [
@@ -28,6 +34,12 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', component: NotFoundPageComponent },
+
+  { path: 'admin-home', component: AdminHomeComponent },
+  { path: 'admin-book', component: AdminBookComponent  },
+  { path: 'admin-sidebar', component: AdminSidebarComponent },
+
+
 ];
 
 @NgModule({

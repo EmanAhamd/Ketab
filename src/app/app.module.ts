@@ -15,6 +15,25 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatSelectModule } from '@angular/material/select';
+import {MatStepperModule} from '@angular/material/stepper';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+
+import{MatMenuModule}from '@angular/material/menu';
+
+import{MatDividerModule}from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
+
+
 import { LoginComponent } from './Components/Auth/login/login.component';
 import { RegisterComponent } from './Components/Auth/register/register.component';
 import { HomeComponent } from './Components/User/Home/home/home.component';
@@ -38,7 +57,13 @@ import { ChildrenArabicBookItemComponent } from './Components/User/Children-Book
 import { ChildrenArabicBooksComponent } from './Components/User/Children-Books/Children-Arabic/children-arabic-books/children-arabic-books.component';
 import { ChildrenEnglishBookItemComponent } from './Components/User/Children-Books/Children-English/children-english-book-item/children-english-book-item.component';
 import { ChildrenEnglishBooksComponent } from './Components/User/Children-Books/Children-English/children-english-books/children-english-books.component';
-import { AdminSidebarComponent } from './Shared/admin-sidebar/admin-sidebar.component';
+
+import { AdminHomeComponent } from './Admin/admin-home/admin-home.component';
+
+import { AdminBookComponent } from './Admin/admin-book/admin-book.component';
+import { AdminSidebarComponent } from './Admin/admin-sidebar/admin-sidebar.component';
+
+
 
 
 
@@ -68,7 +93,14 @@ import { AdminSidebarComponent } from './Shared/admin-sidebar/admin-sidebar.comp
     ChildrenArabicBooksComponent,
     ChildrenEnglishBookItemComponent,
     ChildrenEnglishBooksComponent,
-    AdminSidebarComponent
+  
+    AdminHomeComponent,
+    
+    AdminBookComponent,
+          AdminSidebarComponent,
+       
+    
+
 
   ],
   imports: [
@@ -83,7 +115,28 @@ import { AdminSidebarComponent } from './Shared/admin-sidebar/admin-sidebar.comp
     HttpClientModule,
     BrowserAnimationsModule,
     CarouselModule,
-    FormsModule
+    FormsModule,
+
+
+    MatSidenavModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatDividerModule,
+    MatListModule,
+    MatInputModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    HttpClientModule,
+  
+    MatTableModule,
+    MatPaginatorModule,
+    MatSelectModule,
+    MatSortModule,
+    MatSlideToggleModule,
+ 
+    MatStepperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
