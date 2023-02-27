@@ -1,1 +1,76 @@
-<p>register works!</p>
+<div class="container">
+    <form [formGroup]="registerForm"  (ngSubmit)="submitForm(registerForm)" class=" row p-5">
+
+        <div class="col-md-6 col-sm-11">
+            <label  for="firstName">First Name</label>
+            <input formControlName="firstName" class=" form-control mb-2" type="text"  id="firstName">
+            <div *ngIf="registerForm.get('firstName')?.errors && registerForm.get('firstName')?.touched" 
+            class="">
+                <p class=" text-danger ms-4" *ngIf="registerForm.get('firstName')?.errors?.['required']">
+                    This field is required</p>
+                <p class=" text-danger ms-4" *ngIf="registerForm.get('firstName')?.errors?.['pattern']">
+                    First character must be upperCase</p>
+                <p class=" text-danger ms-4" *ngIf="registerForm.get('firstName')?.errors?.['minlength']">
+                    At least 3 characteres</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-11">
+            <label  for="lastName">Last Name</label>
+            <input formControlName="lastName" class=" form-control mb-2" type="text"  id="lastName">
+            <div *ngIf="registerForm.get('lastName')?.errors && registerForm.get('lastName')?.touched " >
+                <p class=" text-danger ms-4" *ngIf="registerForm.get('lastName')?.errors?.['required']">
+                    This field is required</p>
+                <p class=" text-danger ms-4" *ngIf="registerForm.get('lastName')?.errors?.['pattern']">
+                    First character must be upperCase</p>
+                <p  class=" text-danger ms-4" *ngIf="registerForm.get('lastName')?.errors?.['minlength']"> 
+                    At least 3 characteres</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-11">
+            <label  for="phone">Phone</label>
+            <input formControlName="phone" class=" form-control mb-2" type="tel" name="mail" id="phone">
+            <div *ngIf="registerForm.get('phone')?.errors && registerForm.get('phone')?.touched ">
+                <p class=" text-danger ms-4" *ngIf="registerForm.get('phone')?.errors?.['required']">This field is required</p>
+                <p class=" text-danger ms-4" *ngIf="registerForm.get('phone')?.errors?.['pattern']">This phone number is Invalid</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-11">
+            <label  for="Address">Address</label>
+            <input formControlName="Address" class=" form-control mb-2" type="text"  id="Address">
+            <div *ngIf="registerForm.get('Address')?.errors && registerForm.get('Address')?.touched">
+                <p class=" text-danger ms-4" *ngIf="registerForm.get('Address')?.errors?.['required']">This field is required</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-11">
+            <label for="email">Email</label>
+            <input formControlName="Email" class=" form-control mb-2" type="email" name="mail" id="email">
+            <div *ngIf="registerForm.get('Email')?.errors && registerForm.get('Email')?.touched ">
+                <p class=" text-danger ms-4" *ngIf="registerForm.get('Email')?.errors?.['required']">This field is required</p>
+                <p class=" text-danger ms-4" *ngIf="registerForm.get('Email')?.errors?.['email']">This email is Invalid</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-11">
+            <label  for="password">Password</label>
+            <input formControlName="password" class=" form-control mb-2" type="password"  id="password">
+            <div *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched ">
+                <ul *ngIf="registerForm.get('password')?.errors?.['pattern']" class=" text-danger ms-4">
+                    <li> At least one upper case English letter</li>
+                    <li>At least one lower case English letter</li>
+                    <li> At least one special character or space</li>
+                    <li> At least 8 digits</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class=" text-center">
+            <button type="submit" [disabled]="registerForm.invalid" class=" w-50 btn btn-info text-white  mt-4">
+                Sign Up
+            </button>    
+        </div>
+    </form>
+</div>
