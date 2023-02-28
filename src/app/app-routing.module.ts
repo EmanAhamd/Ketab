@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+
+
 import { AdminLayoutComponent } from './Components/Admin/admin-layout/admin-layout.component';
 import { CrudAuthorsComponent } from './Components/Admin/crud-authors/crud-authors.component';
 import { CrudBooksComponent } from './Components/Admin/crud-books/crud-books.component';
 import { AdminHomeComponent } from './Components/Admin/Dashboard/admin-home/admin-home.component';
+
+
 import { LoginComponent } from './Components/Auth/login/login.component';
 import { RegisterComponent } from './Components/Auth/register/register.component';
 import { ArabicBooksComponent } from './Components/User/Arabic-Books/arabic-books/arabic-books.component';
@@ -16,6 +21,10 @@ import { HomeComponent } from './Components/User/Home/home/home.component';
 import { NewArrivalsComponent } from './Components/User/New-Arrivals/new-arrivals/new-arrivals.component';
 
 import { NotFoundPageComponent } from './Components/User/not-found-page/not-found-page.component';
+
+
+
+
 
 
 
@@ -43,6 +52,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', component: NotFoundPageComponent },
+
+  
+
+
 ];
 
 @NgModule({
