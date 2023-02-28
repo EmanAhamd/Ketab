@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -58,10 +59,16 @@ import { ChildrenArabicBooksComponent } from './Components/User/Children-Books/C
 import { ChildrenEnglishBookItemComponent } from './Components/User/Children-Books/Children-English/children-english-book-item/children-english-book-item.component';
 import { ChildrenEnglishBooksComponent } from './Components/User/Children-Books/Children-English/children-english-books/children-english-books.component';
 
-import { AdminHomeComponent } from './Admin/admin-home/admin-home.component';
 
-import { AdminBookComponent } from './Admin/admin-book/admin-book.component';
-import { AdminSidebarComponent } from './Admin/admin-sidebar/admin-sidebar.component';
+
+
+
+import { CrudBooksComponent } from './Components/Admin/crud-books/crud-books.component';
+import { AdminLayoutComponent } from './Components/Admin/admin-layout/admin-layout.component';
+import { AdminHomeComponent } from './Components/Admin/Dashboard/admin-home/admin-home.component';
+import { SideNavComponent } from './Components/Admin/Dashboard/side-nav/side-nav.component';
+import { CrudAuthorsComponent } from './Components/Admin/crud-authors/crud-authors.component';
+
 
 
 
@@ -93,13 +100,21 @@ import { AdminSidebarComponent } from './Admin/admin-sidebar/admin-sidebar.compo
     ChildrenArabicBooksComponent,
     ChildrenEnglishBookItemComponent,
     ChildrenEnglishBooksComponent,
+
   
+  
+    
+   
+  CrudBooksComponent,
+    AdminLayoutComponent,
     AdminHomeComponent,
+    SideNavComponent,
+    CrudAuthorsComponent,
     
-    AdminBookComponent,
-          AdminSidebarComponent,
-       
     
+
+  
+
 
 
   ],
@@ -116,27 +131,17 @@ import { AdminSidebarComponent } from './Admin/admin-sidebar/admin-sidebar.compo
     BrowserAnimationsModule,
     CarouselModule,
     FormsModule,
+    ReactiveFormsModule
 
 
-    MatSidenavModule,
-    MatToolbarModule,
-    MatMenuModule,
-    MatIconModule,
-    MatDividerModule,
-    MatListModule,
-    MatInputModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    HttpClientModule,
+   
+    
+   
   
-    MatTableModule,
-    MatPaginatorModule,
-    MatSelectModule,
-    MatSortModule,
-    MatSlideToggleModule,
- 
-    MatStepperModule,
+   
+
+   
+
   ],
   providers: [],
   bootstrap: [AppComponent]

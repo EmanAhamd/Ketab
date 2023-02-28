@@ -1,1 +1,23 @@
-<p>login works!</p>
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="logSubmit(loginForm)" class="p-5" >
+
+        <label for="mail">Email</label>
+        <input formControlName="Email"  type="email" name="" id="mail" class=" form-control mb-2">
+        <div *ngIf="loginForm.get('Email')?.errors && loginForm.get('Email')?.touched ">
+            <p class=" text-danger ms-4" *ngIf="loginForm.get('Email')?.errors?.['required']">This field is required</p>
+            <p class=" text-danger ms-4" *ngIf="loginForm.get('Email')?.errors?.['email']">This email is Invalid</p>
+        </div>
+    
+        <label for="pass">Password</label>
+        <input formControlName="password"  type="password" name="" id="pass" class=" form-control mb-2">
+        <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched ">
+            <p class=" text-danger ms-4" *ngIf="loginForm.get('password')?.errors?.['required']">This field is required</p>
+        </div>
+
+        <p class="small">don't have an account? <u><a routerLink="/register">Sign Up now. </a></u></p>
+    
+        <div class="text-center">
+            <button [disabled]="loginForm.invalid" type="submit" class="btn btn-info text-white w-25  mt-3">Login</button>
+        </div>
+    </form>
+</div>

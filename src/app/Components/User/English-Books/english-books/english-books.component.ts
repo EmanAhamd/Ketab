@@ -19,6 +19,7 @@ export class EnglishBooksComponent {
       }
     });
     this.FilteriedBooks = this.EnglishBooks;
+
   }
 
   EnglishBooks: any[] = this.bookService.EnglishBooks;

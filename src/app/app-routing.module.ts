@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminBookComponent } from './Admin/admin-book/admin-book.component';
-import { AdminHomeComponent } from './Admin/admin-home/admin-home.component';
+
+
+
+import { AdminLayoutComponent } from './Components/Admin/admin-layout/admin-layout.component';
+import { CrudAuthorsComponent } from './Components/Admin/crud-authors/crud-authors.component';
+import { CrudBooksComponent } from './Components/Admin/crud-books/crud-books.component';
+import { AdminHomeComponent } from './Components/Admin/Dashboard/admin-home/admin-home.component';
+
+
 import { LoginComponent } from './Components/Auth/login/login.component';
 import { RegisterComponent } from './Components/Auth/register/register.component';
 import { ArabicBooksComponent } from './Components/User/Arabic-Books/arabic-books/arabic-books.component';
@@ -15,7 +22,8 @@ import { NewArrivalsComponent } from './Components/User/New-Arrivals/new-arrival
 
 import { NotFoundPageComponent } from './Components/User/not-found-page/not-found-page.component';
 
-import { AdminSidebarComponent } from './Admin/admin-sidebar/admin-sidebar.component';
+
+
 
 
 
@@ -31,13 +39,21 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'book/:id', component: BookDetailsComponent },
 
+  {
+    path: 'admin', component: AdminLayoutComponent,
+    children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: AdminHomeComponent },
+      { path: 'crudBooks', component: CrudBooksComponent },
+      { path: 'crudAuthors', component: CrudAuthorsComponent },
+    ]
+  },
+
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', component: NotFoundPageComponent },
 
-  { path: 'admin-home', component: AdminHomeComponent },
-  { path: 'admin-book', component: AdminBookComponent  },
-  { path: 'admin-sidebar', component: AdminSidebarComponent },
+  
 
 
 ];
