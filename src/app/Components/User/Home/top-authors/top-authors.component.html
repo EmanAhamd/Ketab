@@ -2,8 +2,8 @@
     <h2>Top Authors</h2>
     <div class="topAuthors">
         <div class="author" *ngFor="let author of topAuthors">
-            <a href=""><img [src]="author.image"></a>
-            <p>Author Name</p>
+            <a ><img [src]="author.image" [routerLink]="['/book',author.isbn13]"></a>
+            <p>{{author.firstname}}</p>
         </div>
     </div>
 </div>

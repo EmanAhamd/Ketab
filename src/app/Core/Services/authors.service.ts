@@ -9,6 +9,6 @@ export class AuthorsService {
 
   constructor(private http: HttpClient) { }
   getTopAuthors(): Observable<any> {
-    return this.http.get("https://api.itbook.store/1.0/new");
+    return this.http.get("https://localhost:7248/api/Authors");
   }
 }
