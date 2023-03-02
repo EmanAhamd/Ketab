@@ -1,9 +1,7 @@
-<app-navbare></app-navbare>
+<app-navbare *ngIf="isNotAdmin"></app-navbare>
 <div class=" marg">
     <router-outlet></router-outlet>
 </div>
-<app-footer></app-footer>
 
-<app-admin-sidebar></app-admin-sidebar>
-<app-admin-home></app-admin-home>
+<app-footer *ngIf="isNotAdmin"></app-footer>
 
