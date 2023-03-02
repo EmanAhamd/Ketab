@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-nav',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./side-nav.component.css']
 })
 export class SideNavComponent {
+  
+  constructor(private router:Router){}
+
+  logout(){
+    localStorage.removeItem("currentUser");
+    localStorage.removeItem("currentRole");
+    this.router.navigate(['/login'])
+  }
 
 }

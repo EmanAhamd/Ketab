@@ -31,16 +31,19 @@
 
       </ul>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0  m-auto" fxLayoutGap="20">
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isLogged && authService.isLogExpiered()">
           <a class="nav-link" routerLink="/cart" routerLinkActive="colorActive">
             <i class="fa fa-shopping-cart"></i>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/login" routerLinkActive="colorActive">Login</a>
+        <li class="nav-item" *ngIf="!isLogged || !authService.isLogExpiered()">
+          <a class="nav-link"  routerLink="/login" routerLinkActive="colorActive">Login</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/register" routerLinkActive="colorActive">SignUp</a>
+        <li class="nav-item" *ngIf="!isLogged || !authService.isLogExpiered()">
+          <a class="nav-link"  routerLink="/register" routerLinkActive="colorActive">SignUp</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged && authService.isLogExpiered()">
+          <a class="nav-link"  (click)="logout()" routerLinkActive="colorActive">Logout</a>
         </li>
       </ul>
     </div>

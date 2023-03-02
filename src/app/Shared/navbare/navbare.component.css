@@ -51,3 +51,7 @@ nav {
     box-shadow: none !important;
   }
 }
+
+a{
+  cursor: pointer;
+}
