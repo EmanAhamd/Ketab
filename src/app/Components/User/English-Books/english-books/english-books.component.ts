@@ -9,26 +9,26 @@ import { BookService } from 'src/app/Core/Services/book.service';
 })
 export class EnglishBooksComponent {
   term: string = '';
-  FilteriedBooks: any[] = [];
-  chips: any[] = ["All"];
+  EnglishBooks: any[] = [];
 
   constructor(private bookService: BookService) {
-    this.EnglishBooks.forEach(item => {
-      if (!this.chips.includes(item.category)) {
-        this.chips.push(item.category)
-      }
+    this.bookService.getAllEnglishBooks().subscribe((res) =>{
+      console.log("res",res);
+      this.EnglishBooks = res;
     });
-    this.FilteriedBooks = this.EnglishBooks;
-
+  }
+  getAllEnglish(){
+    this.bookService.getAllEnglishBooks().subscribe((res) =>{
+      console.log("res",res);
+      this.EnglishBooks = res;
+    });
+  }
+  getCategoryBooks(name:string){
+    this.bookService.getEnglishBooksCategories(name).subscribe((res) =>{
+      console.log("category", res);
+      this.EnglishBooks = res;
+      
+    })
   }
 
-  EnglishBooks: any[] = this.bookService.EnglishBooks;
-
-
-  filterByCategory(chip: any) {
-    if (chip === "All") {
-      this.FilteriedBooks = this.EnglishBooks;
-    } else
-      this.FilteriedBooks = this.EnglishBooks.filter(item => item.category.toLocaleLowerCase().includes(chip.toLocaleLowerCase()));
-  }
 }

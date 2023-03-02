@@ -51,43 +51,32 @@ export class BookService {
 
 
   getNewArrivalBooks(): Observable<any> {
-    // return this.http.get("https://api.itbook.store/1.0/new");
-    return this.http.get("https://localhost:7248/api/books/getByMainCategory?getByMainCategory=NewE") ;
-   
-    
+    return this.http.get("https://localhost:7248/api/books/getByNewArrival") ;
+
   }
 
   getNewArrivalBooksA(): Observable<any> {
     // return this.http.get("https://api.itbook.store/1.0/new");
     return this.http.get("https://localhost:7248/api/books/getByMainCategory?getByMainCategory=NewA") ;
-   
-    
   }
 
 
   BestSeller(): Observable<any> {
     // return this.http.get("https://api.itbook.store/1.0/new");
     return this.http.get("https://localhost:7248/api/bookBestSeller") ;
-   
-    
   }
 
-
-
-
-
-
-  
-
-
-
-
-
-
-  getBookDetails(isbn13: any): Observable<any> {
-    return this.http.get(`https://localhost:7248/api/books/${isbn13}`);
+  getBookDetails(id: any): Observable<any> {
+    return this.http.get(`https://localhost:7248/api/books/${id}`);
   }
 
+  getAllEnglishBooks():Observable<any>{
+    return this.http.get(`https://localhost:7248/api/books/getByMainCategory?getByMainCategory=English`);
+  }
 
+getEnglishBooksCategories(name:string):Observable<any>{
+  return this.http.get(
+    `https://localhost:7248/api/books/getByMainCategoryByCategoryname?MainCategory=English&Categoryname=${name}`)
+}
 
 }

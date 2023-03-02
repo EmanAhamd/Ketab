@@ -4,11 +4,11 @@
         *ngFor="let book of englishBooks|search:term">
             <div class="book-holder">
                 <div [routerLink]="['/book',book.id]" class="book-img">
-                    <img src="{{book.img}}" alt="book">
+                    <img src="{{book.poster}}" alt="book">
                     <div class="book-desc">
                         <p class="book-title">{{book.title}}</p>
-                        <p class="auther-name">Auther Name</p>
-                        <p class="book-price">{{book.price}}</p>
+                        <p class="auther-name">{{book.authorFirstname}} {{book.authorLastname}}</p>
+                        <p class="book-price"><span class="woocommerce-Price-currencySymbol">EGP</span> {{book.price}}</p>
                     </div>
                 </div>
                 <div class="add-btn-container">

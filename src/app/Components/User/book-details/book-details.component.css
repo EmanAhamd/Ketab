@@ -1,11 +1,16 @@
 img{
     width: 100%;
 }
-input{
+/* input{
     height: 34px;
     width: 100%;
+} */
+.authorPage{
+    cursor: pointer;
 }
-
+.authorPage:hover{
+    color:#07BFA5;
+}
 .btn-dark{
     width:100%;
     background-color: #07BFA5;
@@ -18,4 +23,10 @@ input{
 table{
     font-size: 18px;
     color: #002152;
+}
+.cuurency {
+    font-size: 12px;
+    line-height: 19px;
+    color: rgba(51,51,51,.5);
+    margin-right: 4px;
 }
