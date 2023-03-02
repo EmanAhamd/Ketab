@@ -12,7 +12,7 @@ export class BestSellerComponent {
 bestSellerBooks:any[] = []
 
 constructor(private bookService:BookService){
-  bookService. BestSeller().subscribe((res) => {
+    bookService. BestSeller().subscribe((res) => {
     let response = res;
     this.bestSellerBooks = response.slice(0,4);
 });

@@ -38,6 +38,12 @@ img{
     margin-bottom: 13px;
     display: block;
 }
+.book-price span {
+    font-weight: 400;
+    font-size: 15px;
+    color: #8991A4;
+    margin-right: 5px;
+}
 /* Book desc */
 .auther-name,
 .book-title{

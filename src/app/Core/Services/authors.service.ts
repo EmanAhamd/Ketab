@@ -11,4 +11,10 @@ export class AuthorsService {
   getTopAuthors(): Observable<any> {
     return this.http.get("https://localhost:7248/api/Authors");
   }
+
+  getAuthorDetails(name: any): Observable<any> {
+    return this.http.get(`https://localhost:7248/api/Authors/${name}`);
+  }
+
+
 }

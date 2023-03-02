@@ -7,6 +7,7 @@ import { AdminHomeComponent } from './Components/Admin/Dashboard/admin-home/admi
 import { LoginComponent } from './Components/Auth/login/login.component';
 import { RegisterComponent } from './Components/Auth/register/register.component';
 import { ArabicBooksComponent } from './Components/User/Arabic-Books/arabic-books/arabic-books.component';
+import { AuthorDetailsComponent } from './Components/User/author-details/author-details.component';
 import { BookDetailsComponent } from './Components/User/book-details/book-details.component';
 import { CartComponent } from './Components/User/Cart/cart/cart.component';
 import { ChildrenArabicBooksComponent } from './Components/User/Children-Books/Children-Arabic/children-arabic-books/children-arabic-books.component';
@@ -35,6 +36,7 @@ const routes: Routes = [
   { path: 'childrenArabic', component: ChildrenArabicBooksComponent },
   { path: 'cart', component: CartComponent,canActivate:[AuthGuard] },
   { path: 'book/:id', component: BookDetailsComponent },
+  { path: 'author/:name', component: AuthorDetailsComponent },
 
   {
     path: 'admin' , component: AdminLayoutComponent,canActivate:[HasRoleGuard],

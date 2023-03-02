@@ -5,13 +5,11 @@
         *ngFor="let newBook of newArrivals">
             <div class="book-holder">
                 <span>New</span>
-                <div class="book-img">
-                    <img [src]="newBook.poster" alt="img">
-
+                <div [routerLink]="['/book',newBook.id]" class="book-img">
+                    <img class="mb-3" [src]="newBook.poster" alt="img">
                     <div class="book-desc">
                         <p class="book-title">{{newBook.title}}</p>
-                        
-                        <p class="book-price">{{newBook.price}} <span>$68.00</span></p>
+                        <p class="book-price"><span class="woocommerce-Price-currencySymbol">EGP</span>{{newBook.price}}</p>
                     </div>
                 </div>
                 <div class="add-btn-container">
