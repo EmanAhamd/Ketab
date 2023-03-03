@@ -28,6 +28,13 @@ h1{
     width: fit-content;
 }
 
+.disActive{
+    background-color: #002152 !important;
+}
+.active{
+    background-color: #07BFA5 !important;
+}
+
 .btn:hover{
     background-color: #07BFA5 !important;
 }

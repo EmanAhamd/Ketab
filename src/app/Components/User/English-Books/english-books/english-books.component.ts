@@ -10,6 +10,9 @@ import { BookService } from 'src/app/Core/Services/book.service';
 export class EnglishBooksComponent {
   term: string = '';
   EnglishBooks: any[] = [];
+  Chips:string[]=['Art', 'Health', 'Fiction', 'Science','Travel','History'];
+  // toggle:boolean= true;
+  // backColor:string = 'disActive'
 
   constructor(private bookService: BookService) {
     this.bookService.getAllEnglishBooks().subscribe((res) =>{
@@ -27,8 +30,9 @@ export class EnglishBooksComponent {
     this.bookService.getEnglishBooksCategories(name).subscribe((res) =>{
       console.log("category", res);
       this.EnglishBooks = res;
-      
-    })
+    });
+    // this.toggle =!this.toggle;
+    // this.backColor = this.toggle ? 'disActive' : 'active'
   }
 
 }
