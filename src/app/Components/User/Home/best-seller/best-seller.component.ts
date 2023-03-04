@@ -14,7 +14,7 @@ bestSellerBooks:any[] = []
 constructor(private bookService:BookService){
     bookService. BestSeller().subscribe((res) => {
     let response = res;
-    this.bestSellerBooks = response;
+    this.bestSellerBooks = response.slice(0,60);
     console.log(res) ;
 });
 }
@@ -63,7 +63,7 @@ constructor(private bookService:BookService){
 
 customOptions: OwlOptions = {
   stagePadding: 500 ,
-  loop: true,
+  loop: false ,
   mouseDrag: false,
   touchDrag:true,
   pullDrag: true,
