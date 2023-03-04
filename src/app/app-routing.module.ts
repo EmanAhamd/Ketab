@@ -16,10 +16,11 @@ import { EnglishBooksComponent } from './Components/User/English-Books/english-b
 import { HomeComponent } from './Components/User/Home/home/home.component';
 import { NewArrivalsComponent } from './Components/User/New-Arrivals/new-arrivals/new-arrivals.component';
 
+
 import { NotFoundPageComponent } from './Components/User/not-found-page/not-found-page.component';
+import { ReviewsComponent } from './Components/User/reviews/reviews.component';
 import { AuthGuard } from './Core/guards/auth.guard';
 import { HasRoleGuard } from './Core/guards/has-role.guard';
-
 
 
 
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent,canActivate:[AuthGuard] },
   { path: 'book/:id', component: BookDetailsComponent },
   { path: 'author/:name', component: AuthorDetailsComponent },
+  {path : 'book/:id',component : ReviewsComponent  } ,
 
   {
     path: 'admin' , component: AdminLayoutComponent,canActivate:[HasRoleGuard],

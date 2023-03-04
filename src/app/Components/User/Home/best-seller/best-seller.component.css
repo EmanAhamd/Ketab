@@ -8,18 +8,15 @@ h2{
 
 img{
     border-radius: 5px;
-   
 }
 
 img:hover{
     cursor: pointer;
     transform: scale(1.1);
-  
 }
 
 @media screen and (max-width: 767px) {
     h2{
         font-size: 30px;
     }
-   
 }

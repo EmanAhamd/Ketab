@@ -1,11 +1,10 @@
-.container {
+.container{
     margin-top: 15%;
 }
-
-h1 {
-    color: #0F172A;
+h1{
+    color:#0F172A;
     font-weight: 400;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 56px;
     text-align: center;
 }
@@ -14,14 +13,13 @@ h1 {
     color: #002152 !important;
     border-color: #07BFA5 !important;
     box-shadow: 0 0 0 0.19rem #b8efe7 !important;
-
 }
 
-.form-control {
+.form-control{
     border-radius: 20px !important;
 }
 
-.btn {
+.btn{
     background-color: #002152 !important;
     font-size: 14px;
     border: none !important;
@@ -30,6 +28,18 @@ h1 {
     width: fit-content;
 }
 
-.btn:hover {
+.disActive{
+    background-color: #002152 !important;
+}
+.active{
     background-color: #07BFA5 !important;
+}
+
+.btn:hover{
+    background-color: #07BFA5 !important;
+}
+@media screen and (max-width: 992px) {
+    .btn-holder{
+        width: 100%;
+    }
 }

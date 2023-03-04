@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { BookService } from 'src/app/Core/Services/book.service';
+
+
+
 
 @Component({
   selector: 'app-reviews',
@@ -7,4 +11,30 @@ import { Component } from '@angular/core';
 })
 export class ReviewsComponent {
 
-}
+ 
+
+//   id:any;
+//   bookReviews:any={} ;
+//   isLogged:boolean = false;
+
+// comment : any [] = [] ;
+
+//   constructor(private bookService:BookService){
+
+//     bookService.getAllReviews().subscribe((data) => {
+    
+//       this.comment = data;
+//       console.log(data);
+     
+      
+  //   });
+  
+  // }
+
+
+ 
+  }
+
+
+
+
