@@ -35,32 +35,4 @@
 
 
 
-    <div class="container">
-        <h1>وصل حديثا</h1>
-
-
-
-
-
-        <div class="row">
-            <div class=" col-lg-3 col-md-6 col-sm-12 mb-5" *ngFor="let newBookA of newArrivalsA">
-                <div class="book-holder">
-                    <span>New</span>
-                    <div  class="book-img">
-                        <!-- [routerLink]="['/book',book.isbn13]" -->
-                        <img src="{{newBookA.poster}}" alt="book">
-                        <div class="book-desc">
-                            <p class="book-title">{{newBookA.title}}</p>
-                            <!-- <p class="auther-name">{{newBook.authorID}}</p> -->
-                            <p class="book-price">{{newBookA.price}} </p>
-                        </div>
-                    </div>
-                    <div class="add-btn-container">
-                        <button class="add-btn">
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    
