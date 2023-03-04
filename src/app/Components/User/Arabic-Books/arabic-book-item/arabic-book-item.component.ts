@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./arabic-book-item.component.css']
 })
 export class ArabicBookItemComponent {
-  @Input() Books: any[] = [];
-  @Input() terms: string = '';
+  @Input() arabicBooks:any[] = [];
+  @Input() term:string= '';
 }

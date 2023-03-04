@@ -8,25 +8,30 @@ import { BookService } from 'src/app/Core/Services/book.service';
 })
 export class ChildrenEnglishBooksComponent {
   term: string = '';
-  FilteriedBooks: any[] = [];
-  chips: any[] = ["All"];
+  EnglishBooks: any[] = [];
+  Chips:string[]=['3 to 6 years ', '6 to 10 years ', 'Educational', 'Game Books','colouring activity'];
+  // toggle:boolean= true;
+  // backColor:string = 'disActive'
 
   constructor(private bookService: BookService) {
-    this.EnglishBooks.forEach(item => {
-      if (!this.chips.includes(item.category)) {
-        this.chips.push(item.category)
-      }
+    this.bookService.getAllEnglishBooks().subscribe((res) =>{
+      console.log("res",res);
+      this.EnglishBooks = res;
     });
-    this.FilteriedBooks = this.EnglishBooks;
+  }
+  getAllEnglish(){
+    this.bookService.getAllChildEBooks().subscribe((res) =>{
+      console.log("res",res);
+      this.EnglishBooks = res;
+    });
+  }
+  getCategoryBooks(name:string){
+    this.bookService.getChildEBooksCategories(name).subscribe((res) =>{
+      console.log("category", res);
+      this.EnglishBooks = res;
+    });
+    // this.toggle =!this.toggle;
+    // this.backColor = this.toggle ? 'disActive' : 'active'
   }
 
-  EnglishBooks: any[] = this.bookService.EnglishBooks;
-
-
-  filterByCategory(chip: any) {
-    if (chip === "All") {
-      this.FilteriedBooks = this.EnglishBooks;
-    } else
-      this.FilteriedBooks = this.EnglishBooks.filter(item => item.category.toLocaleLowerCase().includes(chip.toLocaleLowerCase()));
-  }
 }

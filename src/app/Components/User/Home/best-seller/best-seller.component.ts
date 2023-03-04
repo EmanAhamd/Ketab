@@ -14,11 +14,12 @@ bestSellerBooks:any[] = []
 constructor(private bookService:BookService){
     bookService. BestSeller().subscribe((res) => {
     let response = res;
-    this.bestSellerBooks = response.slice(0,4);
+    this.bestSellerBooks = response;
+    console.log(res) ;
 });
 }
 
-customOptions: OwlOptions = {
+// customOptions: OwlOptions = {
 //   stagePadding: 500 ,
 //   loop: false,
 //   mouseDrag: false,
@@ -29,63 +30,61 @@ customOptions: OwlOptions = {
 //   navText: ['<i class="fa-solid fa-angles-left">','<i class="fa-solid fa-angles-right"></i>'],
 //   // navText: ['&#8249', '&#8250;'],
 
-stagePadding: 50,
-loop:true,
-margin:20,
-nav:false,
-responsive:{
-    0:{
-        items:1
-    },
-    600:{
-        items:3
-    },
-    1000:{
-        items:5
-    }
-}
-}
 
-
-//   responsive: {
-//     0: {
-//       items: 1
-//     },
-//     400: {
-//       items: 2
-//     },
-//     760: {
-//       items: 3
-//     },
-//     1000: {
-//       items: 4
-//     }
-//   },
-//   nav: true
-// };
-
-// }
-
-
-// customOptions:OwlOptions = {
-
-//   stagePadding: 500,
-//   loop:false,
-//   margin:10,
-//   nav:true,
-//   responsive:{
-//       0:{
-//           items:1
+// stagePadding: 500 ,
+//     loop: false,
+//     mouseDrag: false,
+//     touchDrag: false,
+//     pullDrag: true,
+//     dots: false,
+//     navSpeed: 600,
+//     navText: ['<i class="fa-solid fa-angles-left">','<i class="fa-solid fa-angles-right"></i>'],
+//     // navText: ['&#8249', '&#8250;'],
+//     responsive: {
+//       0: {
+//         items: 1 
 //       },
-//       600:{
-//           items:3
+//       400: {
+//         items: 2
 //       },
-//       1000:{
-//           items:5
+//       760: {
+//         items: 3
+//       },
+//       1000: {
+//         items: 4
 //       }
-//   }
-// }
+//     },
+//     nav: true
+//   };
 
 // }
 
+
+
+customOptions: OwlOptions = {
+  stagePadding: 500 ,
+  loop: true,
+  mouseDrag: false,
+  touchDrag:true,
+  pullDrag: true,
+  dots: false,
+  navSpeed: 100,
+  navText: ['<i class="fa-solid fa-angles-left">','<i class="fa-solid fa-angles-right"></i>'],
+  // navText: ['&#8249', '&#8250;'],
+  responsive: {
+    0: {
+      items: 1 
+    },
+    400: {
+      items: 2
+    },
+    760: {
+      items: 3
+    },
+    1000: {
+      items: 4
+    }
+  },
+  nav: true
+};
 }
