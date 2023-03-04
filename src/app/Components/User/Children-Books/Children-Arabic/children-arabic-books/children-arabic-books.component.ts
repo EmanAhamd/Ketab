@@ -9,7 +9,7 @@ import { BookService } from 'src/app/Core/Services/book.service';
 export class ChildrenArabicBooksComponent {
   term: string = '';
   ArabicBooks: any[] = [];
-  Chips:string[]=['3 to 6 years ', '6 to 10 years', 'Favourite Characters', 'Read Colour Learn',' Religious'];
+  Chips:string[]=['3 to 6 years ', '6 to 10 years', 'Favourite Characters'];
 
   constructor(private bookService: BookService) {
     this.bookService.getAllChildABooks().subscribe((res) =>{

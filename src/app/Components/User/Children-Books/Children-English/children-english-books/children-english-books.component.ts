@@ -9,12 +9,12 @@ import { BookService } from 'src/app/Core/Services/book.service';
 export class ChildrenEnglishBooksComponent {
   term: string = '';
   EnglishBooks: any[] = [];
-  Chips:string[]=['3 to 6 years ', '6 to 10 years ', 'Educational', 'Game Books','colouring activity'];
+  Chips:string[]=['3 to 6 years ', '6 to 10 years ', 'Educational'];
   // toggle:boolean= true;
   // backColor:string = 'disActive'
 
   constructor(private bookService: BookService) {
-    this.bookService.getAllEnglishBooks().subscribe((res) =>{
+    this.bookService.getAllChildEBooks().subscribe((res) =>{
       console.log("res",res);
       this.EnglishBooks = res;
     });
