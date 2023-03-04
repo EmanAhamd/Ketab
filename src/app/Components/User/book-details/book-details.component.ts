@@ -39,6 +39,7 @@ export class BookDetailsComponent {
       }
     })
   }
+ 
 
   getQuantityValue(value:any){
     console.log("value",value);

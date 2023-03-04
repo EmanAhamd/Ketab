@@ -9,7 +9,7 @@ import { BookService } from 'src/app/Core/Services/book.service';
 export class ArabicBooksComponent {
   term: string = '';
   ArabicBooks: any[] = [];
-  Chips:string[]=['ادب عربى', 'أدب مترجم', 'تاريخ  وسياسة', 'ريادة أعمال','قواميس ومراجع','مصر القديمة'];
+  Chips:string[]=['ادب عربى', 'أدب مترجم', 'تاريخ  وسياسة', 'ريادة أعمال'];
 
   constructor(private bookService: BookService) {
     this.bookService.getAllArabicBooks().subscribe((res) =>{
