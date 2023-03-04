@@ -100,8 +100,8 @@ getChildEBooksCategories(name:string):Observable<any>{
 
 
 
-  getAllReviews():Observable<any>{
-  return this.http.get(`https://localhost:7248/api/Review/GetbyBookID?bookID=40`);
+  getAllReview():Observable<any>{
+  return this.http.get(`https://localhost:7248/api/Review/getAll`);
 }
 
 

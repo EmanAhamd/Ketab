@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { BookService } from 'src/app/Core/Services/book.service';
 
 
@@ -11,30 +11,50 @@ import { BookService } from 'src/app/Core/Services/book.service';
 })
 export class ReviewsComponent {
 
- 
+  
 
-//   id:any;
-//   bookReviews:any={} ;
-//   isLogged:boolean = false;
 
-// comment : any [] = [] ;
 
-//   constructor(private bookService:BookService){
 
-//     bookService.getAllReviews().subscribe((data) => {
+
+
+  id:any;
+  bookReviews:any={} ;
+  isLogged:boolean = false;
+
+comment : any [] = [] ;
+
+  constructor(private bookService:BookService){
+
+    bookService.getAllReview().subscribe((data) => {
     
-//       this.comment = data;
-//       console.log(data);
+      this.comment = data;
+      console.log(data);
      
       
-  //   });
+    });
+    
+ 
+
+   
   
-  // }
+
+
+  
+  }
+
+}
+
+
+
 
 
  
-  }
 
 
 
+
+function reveiw() {
+  throw new Error('Function not implemented.');
+}
 
