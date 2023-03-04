@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 
 
 @Component({
@@ -9,4 +9,7 @@ import { Component, Input} from '@angular/core';
 export class EnglishBookItemComponent {
   @Input() englishBooks:any[] = [];
   @Input() term:string= '';
+  @Output() item = new EventEmitter();
+
+
 }

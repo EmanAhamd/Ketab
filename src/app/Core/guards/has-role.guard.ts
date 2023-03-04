@@ -18,7 +18,9 @@ export class HasRoleGuard implements CanActivate {
       let role:any = localStorage.getItem("currentRole");
       if(role !== 'ADMIN'){
         localStorage.removeItem("currentUser"); 
-        localStorage.removeItem("currentRole"); 
+        localStorage.removeItem("currentRole");
+        localStorage.removeItem("userId");
+
         this.router.navigate(['/login']);
         return false;
       }else{

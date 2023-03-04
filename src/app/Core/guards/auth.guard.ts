@@ -16,6 +16,7 @@ export class AuthGuard implements CanActivate {
       if(this.authService.currentUserData.getValue() == null){
         localStorage.removeItem("currentUser");
         localStorage.removeItem("currentRole");
+        localStorage.removeItem("userId");
         this.router.navigate(['/login']);
         return false;
       }else{

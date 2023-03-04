@@ -9,6 +9,7 @@ export class AdminRoleService {
 
   currentUserRole:any = new BehaviorSubject(localStorage.getItem("currentRole"));
   currentUserData:any = new BehaviorSubject(localStorage.getItem("currentUser")); //second here
+  currentUserId:any = new BehaviorSubject(localStorage.getItem("userId")); 
   role:any;
   
   
@@ -20,13 +21,16 @@ export class AdminRoleService {
     this.currentUserData.next(decodedToken);
 
     let rolesArray = this.currentUserData.getValue()["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
+    let userId = this.currentUserData.getValue()["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"];
+    this.currentUserId.next(userId);
     for (let i = 0; i < rolesArray.length; i++) {
       if(rolesArray[i] == "ADMIN"){
         this.currentUserRole.next(rolesArray[i])
       }
       
     }
-    localStorage.setItem("currentRole", this.currentUserRole.getValue())
+    localStorage.setItem("currentRole", this.currentUserRole.getValue());
+    localStorage.setItem("userId", this.currentUserId.getValue());
 
   }
 
