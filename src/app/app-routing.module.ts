@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { AdminLayoutComponent } from './Components/Admin/admin-layout/admin-layout.component';
 import { CrudAuthorsComponent } from './Components/Admin/crud-authors/crud-authors.component';
 import { CrudBooksComponent } from './Components/Admin/crud-books/crud-books.component';
@@ -10,6 +11,7 @@ import { ArabicBooksComponent } from './Components/User/Arabic-Books/arabic-book
 import { AuthorDetailsComponent } from './Components/User/author-details/author-details.component';
 import { BookDetailsComponent } from './Components/User/book-details/book-details.component';
 import { CartComponent } from './Components/User/Cart/cart/cart.component';
+import { OrderNowComponent } from './Components/User/Cart/order-now/order-now.component';
 import { ChildrenArabicBooksComponent } from './Components/User/Children-Books/Children-Arabic/children-arabic-books/children-arabic-books.component';
 import { ChildrenEnglishBooksComponent } from './Components/User/Children-Books/Children-English/children-english-books/children-english-books.component';
 import { EnglishBooksComponent } from './Components/User/English-Books/english-books/english-books.component';
@@ -35,6 +37,8 @@ const routes: Routes = [
   { path: 'childrenEnglish', component: ChildrenEnglishBooksComponent },
   { path: 'childrenArabic', component: ChildrenArabicBooksComponent },
   { path: 'cart', component: CartComponent,canActivate:[AuthGuard] },
+  { path: 'order', component: OrderNowComponent, canActivate:[AuthGuard] },
+  { path: 'checkout', component:CheckoutComponent , canActivate:[AuthGuard] },
   { path: 'book/:id', component: BookDetailsComponent },
   { path: 'author/:name', component: AuthorDetailsComponent },
 

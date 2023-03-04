@@ -8,6 +8,7 @@ import { Observable, throwError } from 'rxjs';
 })
 export class BookService {
 
+  testQuantity:any[]=[];
   constructor(private http: HttpClient) { }
 
 

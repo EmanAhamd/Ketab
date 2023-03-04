@@ -8,11 +8,11 @@
                     <div class="book-desc">
                         <p class="book-title">{{book.title}}</p>
                         <p class="auther-name">{{book.authorFirstname}} {{book.authorLastname}}</p>
-                        <p class="book-price"><span class="woocommerce-Price-currencySymbol">EGP</span> {{book.price}}</p>
+                        <p class="book-price"><span>EGP</span> {{book.price}}</p>
                     </div>
                 </div>
                 <div class="add-btn-container">
-                    <button class="add-btn">
+                    <button class="add-btn" (click)="item.emit(book)">
                         <i class="fa-solid fa-circle-plus"></i>
                     </button>
                 </div>

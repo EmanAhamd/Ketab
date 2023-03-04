@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartService } from 'src/app/cart.service';
 import { AuthService } from 'src/app/Core/Services/auth.service';
 
 
@@ -12,7 +13,9 @@ import { AuthService } from 'src/app/Core/Services/auth.service';
 export class NavbareComponent {
 
   isLogged:boolean = false;
-  constructor(public authService:AuthService, private router:Router){
+  cartLength:any;
+
+  constructor(public authService:AuthService, private router:Router, public cartService:CartService){
 
     authService.currentUserData.subscribe(() =>{
       if(authService.currentUserData.getValue() == null){
@@ -20,13 +23,17 @@ export class NavbareComponent {
       }else{
         this.isLogged = true;
       }
-    })
+    });
+    this.cartLength =cartService.items.length
   }
+
 
 logout(){
   localStorage.removeItem("currentUser");
   localStorage.removeItem("currentRole");
+  localStorage.removeItem("userId");
   this.router.navigate(['/login'])
 }
-
 }
+
+
