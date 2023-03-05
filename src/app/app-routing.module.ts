@@ -41,20 +41,21 @@ const routes: Routes = [
   { path: 'arabic', component: ArabicBooksComponent },
   { path: 'childrenEnglish', component: ChildrenEnglishBooksComponent },
   { path: 'childrenArabic', component: ChildrenArabicBooksComponent },
-  { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
-  { path: 'order', component: OrderNowComponent, canActivate: [AuthGuard] },
-  { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard] },
+
+  { path: 'cart', component: CartComponent,canActivate:[AuthGuard] },
+  { path: 'order', component: OrderNowComponent, canActivate:[AuthGuard] },
+  { path: 'checkout', component:CheckoutComponent , canActivate:[AuthGuard] },
   { path: 'book/:id', component: BookDetailsComponent },
   { path: 'author/:name', component: AuthorDetailsComponent },
-  { path: 'book/:id', component: ReviewsComponent },
+  {path : 'book/:id',component : ReviewsComponent  } ,
 
   {
-    path: 'admin', component: AdminLayoutComponent, canActivate: [HasRoleGuard],
+    path: 'admin' , component: AdminLayoutComponent,canActivate:[HasRoleGuard],
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', component: AdminHomeComponent },
-      { path: 'crudBooks', component: CrudBooksComponent },
-      { path: 'crudAuthors', component: CrudAuthorsComponent },
+      { path: 'home',canActivate:[HasRoleGuard], component: AdminHomeComponent },
+      { path: 'crudBooks',canActivate:[HasRoleGuard], component: CrudBooksComponent },
+      { path: 'crudAuthors',canActivate:[HasRoleGuard], component: CrudAuthorsComponent },
     ]
   },
 
