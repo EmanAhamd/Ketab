@@ -14,7 +14,7 @@
             {{chip}}</button>
     </div>
     <div>
-        <app-children-english-book-item [englishBooks]="EnglishBooks" [term]="term">
+        <app-children-english-book-item [englishBooks]="EnglishBooks" [term]="term" (item)="addToCart($event.id,$event)">
         </app-children-english-book-item>
     </div>
 </div>

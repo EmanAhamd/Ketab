@@ -19,8 +19,6 @@ export class BookService {
 
   }
 
-
-
   BestSeller(): Observable<any> {
     return this.http.get("https://localhost:7248/api/bookBestSeller");
   }
@@ -79,39 +77,12 @@ export class BookService {
   /*Get Books */
   getAllBooks(): Observable<any> {
     return this.http.get("https://localhost:7248/api/books");
-
-
-
-  BestSeller(): Observable<any> {
-    // return this.http.get("https://api.itbook.store/1.0/new");
-    return this.http.get("https://localhost:7248/api/bookBestSeller") ;
   }
-
-  getBookDetails(id: any): Observable<any> {
-    return this.http.get(`https://localhost:7248/api/books/${id}`);
-
-  }
-
-  getAllEnglishBooks():Observable<any>{
-    return this.http.get(`https://localhost:7248/api/books/getByMainCategory?getByMainCategory=English`);
-  }
-
-getEnglishBooksCategories(name:string):Observable<any>{
-  return this.http.get(
-    `https://localhost:7248/api/books/getByMainCategoryByCategoryname?MainCategory=English&Categoryname=${name}`)
-}
-
-getAllArabicBooks():Observable<any>{
-  return this.http.get(`https://localhost:7248/api/books/getByMainCategory?getByMainCategory=Arabic`);
-}
-
-getArabicBooksCategories(name:string):Observable<any>{
-return this.http.get(
-  `https://localhost:7248/api/books/getByMainCategoryByCategoryname?MainCategory=Arabic%20&Categoryname=${name}`)
-}
-
-
-  /*Add New Book*/
+    /*Delete Book */
+    deleteBook(id: number): Observable<any> {
+      return this.http.delete(`https://localhost:7248/api/books/${id}`);
+    }
+      /*Add New Book*/
   addNewBook(data: any): Observable<any> {
     return this.http.post("https://localhost:7248/api/books", data);
   }
@@ -121,35 +92,4 @@ return this.http.get(
     return this.http.put(`https://localhost:7248/api/books/${id}`, data);
     }
 
-getAllChildEBooks():Observable<any>{
-  return this.http.get(`https://localhost:7248/api/books/getByMainCategory?getByMainCategory=ChildE`);
-}
-
-getChildEBooksCategories(name:string):Observable<any>{
-  return this.http.get(
-    `https://localhost:7248/api/books/getByMainCategoryByCategoryname?MainCategory=ChildE&Categoryname=${name}`)
-  }
-
-
-
-  getAllReview():Observable<any>{
-  return this.http.get(`https://localhost:7248/api/Review/getAll`);
-}
-
-
-getAllChildABooks():Observable<any>{
-  return this.http.get(`https://localhost:7248/api/books/getByMainCategory?getByMainCategory=ChildA`);
-}
-
-
-
-getChildABooksCategories(name:string):Observable<any>{
-  return this.http.get(
-    `https://localhost:7248/api/books/getByMainCategoryByCategoryname?MainCategory=ChildA&Categoryname=${name}`)
-  }
-
-  /*Delete Book */
-  deleteBook(id: number): Observable<any> {
-    return this.http.delete(`https://localhost:7248/api/books/${id}`);
-  }
 }

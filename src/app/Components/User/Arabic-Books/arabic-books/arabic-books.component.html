@@ -13,7 +13,7 @@
     </div>
 
     <div>
-        <app-arabic-book-item [arabicBooks]="ArabicBooks" [term]="term"></app-arabic-book-item>
+        <app-arabic-book-item [arabicBooks]="ArabicBooks" [term]="term" (item)="addToCart($event.id,$event)"></app-arabic-book-item>
     </div>
 </div>
 

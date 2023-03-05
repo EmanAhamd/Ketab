@@ -47,7 +47,7 @@ const routes: Routes = [
   { path: 'checkout', component:CheckoutComponent , canActivate:[AuthGuard] },
   { path: 'book/:id', component: BookDetailsComponent },
   { path: 'author/:name', component: AuthorDetailsComponent },
-  {path : 'book/:id',component : ReviewsComponent  } ,
+  // {path : 'book/:id',component : ReviewsComponent  } ,
 
   {
     path: 'admin' , component: AdminLayoutComponent,canActivate:[HasRoleGuard],

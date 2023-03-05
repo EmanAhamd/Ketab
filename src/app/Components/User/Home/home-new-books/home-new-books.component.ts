@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { BookService } from 'src/app/Core/Services/book.service';
 BookService
 
@@ -9,17 +9,12 @@ BookService
 })
 export class HomeNewBooksComponent {
   newArrivals:any[] = [];
+  @Output() item = new EventEmitter();
 
   constructor(private bookService:BookService){
     bookService.getNewArrivalBooks().subscribe((res) => {
-      // let response = res.title;
       this.newArrivals = res.slice(0,4);
-      // .slice(10,18);
-      
       console.log(res);
-      // console.log(this.newArrivals);
-      
-      
     });
 
   }
