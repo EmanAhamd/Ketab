@@ -7,6 +7,7 @@ import {DatePipe} from '@angular/common';
 
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -33,6 +34,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 
 
@@ -76,10 +78,6 @@ import { CheckoutComponent } from './checkout/checkout.component';
 
 
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -106,10 +104,6 @@ import { CheckoutComponent } from './checkout/checkout.component';
     ChildrenEnglishBookItemComponent,
     ChildrenEnglishBooksComponent,
 
-  
-  
-    
-   
   CrudBooksComponent,
     AdminLayoutComponent,
     AdminHomeComponent,
@@ -119,13 +113,10 @@ import { CheckoutComponent } from './checkout/checkout.component';
     ReviewsComponent,
     OrderNowComponent,
     CheckoutComponent,
-    
-    
-
-  
-
-
-
+    AuthorDetailsComponent,
+    ReviewsComponent,
+    OrderNowComponent,
+    CheckoutComponent,
   ],
   imports: [
     MatIconModule,
@@ -143,13 +134,6 @@ import { CheckoutComponent } from './checkout/checkout.component';
     ReactiveFormsModule
 
 
-   
-    
-   
-  
-   
-
-   
 
   ],
   providers: [DatePipe],

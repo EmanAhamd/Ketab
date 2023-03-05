@@ -10,6 +10,11 @@ export class AuthorsService {
   constructor(private http: HttpClient) { }
   getTopAuthors(): Observable<any> {
     return this.http.get("https://localhost:7248/api/Authors");
+
+  }
+
+  getAuthorDetails(name: any): Observable<any> {
+    return this.http.get(`https://localhost:7248/api/Authors/${name}`);
   }
 
   getAuthorDetails(name: any): Observable<any> {
