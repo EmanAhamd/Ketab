@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {DatePipe} from '@angular/common';
 
 
@@ -17,25 +17,6 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import { MatSelectModule } from '@angular/material/select';
-import {MatStepperModule} from '@angular/material/stepper';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatSortModule } from '@angular/material/sort';
-import { MatTableModule } from '@angular/material/table';
-
-import{MatMenuModule}from '@angular/material/menu';
-
-import{MatDividerModule}from '@angular/material/divider';
-import { MatListModule } from '@angular/material/list';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatPaginatorModule} from '@angular/material/paginator';
-
-
 
 
 import { LoginComponent } from './Components/Auth/login/login.component';
@@ -75,6 +56,7 @@ import { AuthorDetailsComponent } from './Components/User/author-details/author-
 import { ReviewsComponent } from './Components/User/reviews/reviews.component';
 import { OrderNowComponent } from './Components/User/Cart/order-now/order-now.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -130,10 +112,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     HttpClientModule,
     BrowserAnimationsModule,
     CarouselModule,
-    FormsModule,
-    ReactiveFormsModule
-
-
+    ReactiveFormsModule,
+    FormsModule
 
   ],
   providers: [DatePipe],
