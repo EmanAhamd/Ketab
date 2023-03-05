@@ -10,70 +10,70 @@ import { CategoryService } from 'src/app/Core/Services/category.service';
 })
 
 
-export class CrudCategoryComponent implements OnInit {
-  categories: Category[] = []
-  userForm !: FormGroup
-  categoryObj = <Category>{}
+export class CrudCategoryComponent  {
+//   categories: Category[] = []
+//   userForm !: FormGroup
+//   categoryObj = <Category>{}
 
-  constructor(private fb: FormBuilder, private myservice: CategoryService) {
-    this.getCategories()
-  }
+//   constructor(private fb: FormBuilder, private myservice: CategoryService) {
+//     this.getCategories()
+//   }
 
-  ngOnInit(): void {
-    this.userForm = this.fb.group({
-      id: ['', Validators.required],
-      name: ['', Validators.required],
-    });
-  }
+//   ngOnInit(): void {
+//     this.userForm = this.fb.group({
+//       id: ['', Validators.required],
+//       name: ['', Validators.required],
+//     });
+//   }
 
-  getCategories() {
-    this.myservice.getAllCategories().subscribe((data) => {
-      this.categories = data
-    })
-  }
+//   getCategories() {
+//     this.myservice.getAllCategories().subscribe((data) => {
+//       this.categories = data
+//     })
+//   }
 
-  addCategory() {
-    this.categoryObj.name = this.userForm.value.name
+//   addCategory() {
+//     this.categoryObj.name = this.userForm.value.name
 
-    console.log(this.categoryObj);
+//     console.log(this.categoryObj);
 
-    this.myservice.addNewCategory(this.categoryObj).subscribe((res) => {
-      console.log(res);
-      this.getCategories()
-      alert("Category added successfully");
-      this.userForm.reset()
-    })
-  }
+//     this.myservice.addNewCategory(this.categoryObj).subscribe((res) => {
+//       console.log(res);
+//       this.getCategories()
+//       alert("Category added successfully");
+//       this.userForm.reset()
+//     })
+//   }
 
-  updateCategory(category: any) {
-    this.userForm.patchValue({
-      id: category.categoryId,
-      name: category.name
-    })
-  }
+//   updateCategory(category: any) {
+//     this.userForm.patchValue({
+//       id: category.categoryId,
+//       name: category.name
+//     })
+//   }
 
-  Edit() {
-    let updateCategory = this.userForm.value;
-    for (let i = 0; i < this.categories.length; i++) {
-      if (this.categories[i].categoryId == updateCategory.id) {
-        this.categories[i] = updateCategory
-        this.myservice.editCategory(updateCategory.id, this.categories[i]).subscribe((res) => {
-          console.log(res);
-          this.getCategories()
-          alert("Author updated successfully");
-          this.userForm.reset()
-        })
-      }
-    }
+//   Edit() {
+//     let updateCategory = this.userForm.value;
+//     for (let i = 0; i < this.categories.length; i++) {
+//       if (this.categories[i].categoryId == updateCategory.id) {
+//         this.categories[i] = updateCategory
+//         this.myservice.editCategory(updateCategory.id, this.categories[i]).subscribe((res) => {
+//           console.log(res);
+//           this.getCategories()
+//           alert("Author updated successfully");
+//           this.userForm.reset()
+//         })
+//       }
+//     }
 
-  }
+//   }
 
 
-  deleteCategory(id: number) {
-    this.myservice.deleteCategory(id).subscribe((res) => {
-      console.log(res);
-      this.getCategories()
-      alert("deleted");
-    })
-  }
+//   deleteCategory(id: number) {
+//     this.myservice.deleteCategory(id).subscribe((res) => {
+//       console.log(res);
+//       this.getCategories()
+//       alert("deleted");
+//     })
+//   }
 }
