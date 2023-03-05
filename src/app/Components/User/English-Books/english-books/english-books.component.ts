@@ -17,8 +17,6 @@ export class EnglishBooksComponent {
   isLogged:boolean = false;
   EnglishBooks: any[] = [];
   Chips:string[]=['Art', 'Health', 'Fiction', 'Science','Travel','History'];
-  // toggle:boolean= true;
-  // backColor:string = 'disActive'
 
   constructor(
     private bookService: BookService,
@@ -43,8 +41,6 @@ export class EnglishBooksComponent {
       console.log("category", res);
       this.EnglishBooks = res;
     });
-    // this.toggle =!this.toggle;
-    // this.backColor = this.toggle ? 'disActive' : 'active'
   }
 
 

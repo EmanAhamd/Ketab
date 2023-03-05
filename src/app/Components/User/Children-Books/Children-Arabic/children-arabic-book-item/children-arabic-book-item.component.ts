@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-children-arabic-book-item',
@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class ChildrenArabicBookItemComponent {
   @Input() arabicBooks:any[] = [];
   @Input() term:string= '';
+  @Output() item = new EventEmitter();
 }
