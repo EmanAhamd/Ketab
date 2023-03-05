@@ -59,4 +59,39 @@ export class BookService {
 
 
 
+  /*Get All Authors */
+  getAllAuthors(): Observable<any> {
+    return this.http.get("https://localhost:7248/api/Authors");
+  }
+
+  /*Get All Publishers */
+  getAllPublishers(): Observable<any> {
+    return this.http.get("https://localhost:7248/api/Publisher");
+  }
+
+  /*Get Sub Category */
+  getAllCategories(): Observable<any> {
+    return this.http.get("https://localhost:7248/api/Category");
+  }
+
+  /*Get Books */
+  getAllBooks(): Observable<any> {
+    return this.http.get("https://localhost:7248/api/books");
+  }
+
+
+  /*Add New Book*/
+  addNewBook(data: any): Observable<any> {
+    return this.http.post("https://localhost:7248/api/books", data);
+  }
+
+  /*Edit Book*/
+  editBook(id: number, data: any): Observable<any> {
+    return this.http.put(`https://localhost:7248/api/books/${id}`, data);
+  }
+
+  /*Delete Book */
+  deleteBook(id: number): Observable<any> {
+    return this.http.delete(`https://localhost:7248/api/books/${id}`);
+  }
 }

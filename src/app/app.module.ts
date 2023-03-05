@@ -44,6 +44,10 @@ import { AdminLayoutComponent } from './Components/Admin/admin-layout/admin-layo
 import { AdminHomeComponent } from './Components/Admin/Dashboard/admin-home/admin-home.component';
 import { SideNavComponent } from './Components/Admin/Dashboard/side-nav/side-nav.component';
 import { CrudAuthorsComponent } from './Components/Admin/crud-authors/crud-authors.component';
+import { CrudPublishersComponent } from './Components/Admin/crud-publishers/crud-publishers.component';
+import { CrudCategoryComponent } from './Components/Admin/crud-category/crud-category.component';
+import { OrderDetailsComponent } from './Components/Admin/order-details/order-details.component';
+import { ReviewComponent } from './Components/Admin/review/review.component';
 
 
 
@@ -79,6 +83,10 @@ import { CrudAuthorsComponent } from './Components/Admin/crud-authors/crud-autho
     AdminHomeComponent,
     SideNavComponent,
     CrudAuthorsComponent,
+    CrudPublishersComponent,
+    CrudCategoryComponent,
+    OrderDetailsComponent,
+    ReviewComponent,
 
 
   ],

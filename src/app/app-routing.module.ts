@@ -3,7 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminLayoutComponent } from './Components/Admin/admin-layout/admin-layout.component';
 import { CrudAuthorsComponent } from './Components/Admin/crud-authors/crud-authors.component';
 import { CrudBooksComponent } from './Components/Admin/crud-books/crud-books.component';
+import { CrudCategoryComponent } from './Components/Admin/crud-category/crud-category.component';
+import { CrudPublishersComponent } from './Components/Admin/crud-publishers/crud-publishers.component';
 import { AdminHomeComponent } from './Components/Admin/Dashboard/admin-home/admin-home.component';
+import { OrderDetailsComponent } from './Components/Admin/order-details/order-details.component';
+import { ReviewComponent } from './Components/Admin/review/review.component';
 import { LoginComponent } from './Components/Auth/login/login.component';
 import { RegisterComponent } from './Components/Auth/register/register.component';
 import { ArabicBooksComponent } from './Components/User/Arabic-Books/arabic-books/arabic-books.component';
@@ -37,6 +41,10 @@ const routes: Routes = [
       { path: 'home', component: AdminHomeComponent },
       { path: 'crudBooks', component: CrudBooksComponent },
       { path: 'crudAuthors', component: CrudAuthorsComponent },
+      { path: 'crudCategory', component: CrudCategoryComponent },
+      { path: 'crudPublishers', component: CrudPublishersComponent },
+      { path: 'orderDetails', component: OrderDetailsComponent },
+      { path: 'Review', component: ReviewComponent },
     ]
   },
 
