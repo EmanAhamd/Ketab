@@ -10,21 +10,51 @@ BookService
 export class NewArrivalsComponent {
 
   newArrivals:any[] = [];
+  
 
   constructor(private bookService:BookService){
     bookService.getNewArrivalBooks().subscribe((res) => {
-      let response = res.books;
-      this.newArrivals = response.slice(10,18);
+      // let response = res.MainCategory="NewE";
+      this.newArrivals = res.slice(0,16);
+      // .slice(10,18);
       
-      console.log(response);
-      console.log(this.newArrivals);
+      console.log(res);
+      //  console.log(this.newArrivals);
       
     });
 
+    
+   
+     
+      
+    
+
   }
 
+
+
   
-  }
+
+ 
+    
+  
+    
+    }
+
+
+
+ 
+    
+    
+  
+    
+
+
+
+  
+
+  
+  
 
 
 

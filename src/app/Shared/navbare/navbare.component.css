@@ -9,6 +9,7 @@
 
 ul {
   background-color: white;
+ 
 }
 
 .colorActive {
@@ -49,4 +50,21 @@ nav {
   nav {
     box-shadow: none !important;
   }
+}
+
+a{
+  cursor: pointer;
+}
+.cartCounter{
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #07BFA5;
+  color: antiquewhite;
+  text-align:  center;
+  font-size: small;
+  position: absolute;
+  transform: translateX(117%);
+  /* left: 70%; */
+  bottom: 25px;
 }

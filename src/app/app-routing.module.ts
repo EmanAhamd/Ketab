@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { AdminLayoutComponent } from './Components/Admin/admin-layout/admin-layout.component';
 import { CrudAuthorsComponent } from './Components/Admin/crud-authors/crud-authors.component';
 import { CrudBooksComponent } from './Components/Admin/crud-books/crud-books.component';
@@ -11,15 +12,24 @@ import { ReviewComponent } from './Components/Admin/review/review.component';
 import { LoginComponent } from './Components/Auth/login/login.component';
 import { RegisterComponent } from './Components/Auth/register/register.component';
 import { ArabicBooksComponent } from './Components/User/Arabic-Books/arabic-books/arabic-books.component';
+import { AuthorDetailsComponent } from './Components/User/author-details/author-details.component';
 import { BookDetailsComponent } from './Components/User/book-details/book-details.component';
 import { CartComponent } from './Components/User/Cart/cart/cart.component';
+import { OrderNowComponent } from './Components/User/Cart/order-now/order-now.component';
 import { ChildrenArabicBooksComponent } from './Components/User/Children-Books/Children-Arabic/children-arabic-books/children-arabic-books.component';
 import { ChildrenEnglishBooksComponent } from './Components/User/Children-Books/Children-English/children-english-books/children-english-books.component';
 import { EnglishBooksComponent } from './Components/User/English-Books/english-books/english-books.component';
 import { HomeComponent } from './Components/User/Home/home/home.component';
 import { NewArrivalsComponent } from './Components/User/New-Arrivals/new-arrivals/new-arrivals.component';
 
+
 import { NotFoundPageComponent } from './Components/User/not-found-page/not-found-page.component';
+import { ReviewsComponent } from './Components/User/reviews/reviews.component';
+import { AuthGuard } from './Core/guards/auth.guard';
+import { HasRoleGuard } from './Core/guards/has-role.guard';
+
+
+
 
 
 
@@ -31,20 +41,20 @@ const routes: Routes = [
   { path: 'arabic', component: ArabicBooksComponent },
   { path: 'childrenEnglish', component: ChildrenEnglishBooksComponent },
   { path: 'childrenArabic', component: ChildrenArabicBooksComponent },
-  { path: 'cart', component: CartComponent },
+  { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
+  { path: 'order', component: OrderNowComponent, canActivate: [AuthGuard] },
+  { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard] },
   { path: 'book/:id', component: BookDetailsComponent },
+  { path: 'author/:name', component: AuthorDetailsComponent },
+  { path: 'book/:id', component: ReviewsComponent },
 
   {
-    path: 'admin', component: AdminLayoutComponent,
+    path: 'admin', component: AdminLayoutComponent, canActivate: [HasRoleGuard],
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: AdminHomeComponent },
       { path: 'crudBooks', component: CrudBooksComponent },
       { path: 'crudAuthors', component: CrudAuthorsComponent },
-      { path: 'crudCategory', component: CrudCategoryComponent },
-      { path: 'crudPublishers', component: CrudPublishersComponent },
-      { path: 'orderDetails', component: OrderDetailsComponent },
-      { path: 'Review', component: ReviewComponent },
     ]
   },
 
@@ -58,3 +68,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

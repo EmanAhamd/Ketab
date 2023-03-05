@@ -8,22 +8,27 @@ import { BookService } from 'src/app/Core/Services/book.service';
 })
 export class ArabicBooksComponent {
   term: string = '';
-  FilteriedBooks: any[] = [];
-  chips: any[] = ["All"];
-  constructor(private myBookService: BookService) {
-    this.ArabicBooks.forEach(item => {
-      if (!this.chips.includes(item.category)) {
-        this.chips.push(item.category)
-      }
-    });
-    this.FilteriedBooks = this.ArabicBooks
-  }
-  ArabicBooks: any[] = this.myBookService.ArabicBooks;
+  ArabicBooks: any[] = [];
+  Chips:string[]=['ادب عربى', 'أدب مترجم', 'تاريخ  وسياسة', 'ريادة أعمال'];
 
-  filterByCategory(chip: any) {
-    if (chip === "All") {
-      this.FilteriedBooks = this.ArabicBooks;
-    } else
-      this.FilteriedBooks = this.ArabicBooks.filter(item => item.category.toLocaleLowerCase().includes(chip.toLocaleLowerCase()));
+  constructor(private bookService: BookService) {
+    this.bookService.getAllArabicBooks().subscribe((res) =>{
+      console.log("res",res);
+      this.ArabicBooks = res;
+    });
   }
+  getAllArabic(){
+    this.bookService.getAllArabicBooks().subscribe((res) =>{
+      console.log("res",res);
+      this.ArabicBooks = res;
+    });
+  }
+  getCategoryBooks(name:string){
+    this.bookService.getArabicBooksCategories(name).subscribe((res) =>{
+      console.log("category", res);
+      this.ArabicBooks = res;
+      
+    })
+  
+}
 }

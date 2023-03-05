@@ -14,8 +14,8 @@ export class TopAuthorsComponent {
 
 
     authorService.getTopAuthors().subscribe((data) => {
-      this.authors = data.books
-      this.topAuthors = this.authors.slice(14, 19)
+      this.authors = data ;
+      this.topAuthors = this.authors ;
 
     })
 

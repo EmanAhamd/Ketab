@@ -5,12 +5,17 @@
             style="font-family:Arial, FontAwesome" class="form-control w-50 m-auto mt-5">
     </div>
 
-    <div class="row w-75 d-flex justify-content-around m-auto my-5">
-        <button class="col-lg-2 col-md-4 col-sm-6 btn btn-dark shadow" *ngFor="let chip of chips"
-            (click)="filterByCategory(chip)">{{chip}}</button>
+    <div class="row btn-holder w-50  d-flex justify-content-around m-auto my-5">
+        <button class="col-lg-2 col-md-4 col-sm-6 btn btn-dark shadow" (click)="getAllArabic()">All</button>
+        <button *ngFor="let chip of Chips" 
+        class="col-lg-2 col-md-4 col-sm-6 btn btn-dark shadow" (click)="getCategoryBooks(chip)">
+            {{chip}}</button>
     </div>
 
     <div>
-        <app-arabic-book-item [Books]="FilteriedBooks" [terms]="term"></app-arabic-book-item>
+        <app-arabic-book-item [arabicBooks]="ArabicBooks" [term]="term"></app-arabic-book-item>
     </div>
 </div>
+
+
+

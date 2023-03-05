@@ -8,6 +8,7 @@ h1{
     line-height: 56px;
     text-align: center;
 }
+
 .form-control:focus {
     color: #002152 !important;
     border-color: #07BFA5 !important;
@@ -26,6 +27,19 @@ h1{
     border-radius: 20px;
     width: fit-content;
 }
+
+.disActive{
+    background-color: #002152 !important;
+}
+.active{
+    background-color: #07BFA5 !important;
+}
+
 .btn:hover{
     background-color: #07BFA5 !important;
+}
+@media screen and (max-width: 992px) {
+    .btn-holder{
+        width: 100%;
+    }
 }
