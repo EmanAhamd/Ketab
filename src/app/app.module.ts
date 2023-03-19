@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
-import {DatePipe} from '@angular/common';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -57,6 +57,8 @@ import { ReviewsComponent } from './Components/User/reviews/reviews.component';
 import { OrderNowComponent } from './Components/User/Cart/order-now/order-now.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CrudCategoryComponent } from './Components/Admin/crud-category/crud-category.component';
+import { CrudPublishersComponent } from './Components/Admin/crud-publishers/crud-publishers.component';
 
 
 
@@ -86,7 +88,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ChildrenEnglishBookItemComponent,
     ChildrenEnglishBooksComponent,
 
-  CrudBooksComponent,
+    CrudBooksComponent,
     AdminLayoutComponent,
     AdminHomeComponent,
     SideNavComponent,
@@ -99,6 +101,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReviewsComponent,
     OrderNowComponent,
     CheckoutComponent,
+    CrudCategoryComponent,
+    CrudPublishersComponent,
   ],
   imports: [
     MatIconModule,
